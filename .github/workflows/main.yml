@@ -1,8 +1,10 @@
 name: Build and Upload package to NuGet (GitHub Packages)
 
 on:
-  workflow_call:
-  workflow_dispatch:  # Optional, for manual triggering
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build-and-publish:
