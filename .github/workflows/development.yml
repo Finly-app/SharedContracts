@@ -45,3 +45,12 @@ jobs:
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Trigger main workflow
+        uses: peter-evans/workflow-dispatch@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: Finly-app/SharedContracts
+          workflow: main.yml
+          ref: refs/heads/main
+
