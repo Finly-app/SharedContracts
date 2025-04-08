@@ -44,5 +44,5 @@ jobs:
       - name: Push to GitHub Packages (NuGet)
         run: |
           dotnet nuget push ./nupkg/*.nupkg \
-            --api-key ${{ secrets.GITHUB_TOKEN }} \
+            --api-key ${{ secrets.GH_PAT }} \
             --source "https://nuget.pkg.github.com/Finly-app/index.json"
