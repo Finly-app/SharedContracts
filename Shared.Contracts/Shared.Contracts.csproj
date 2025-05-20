@@ -10,7 +10,7 @@
 		<Company>Finly</Company>
 		<Description>Shared contracts for finly microservices.</Description>
 		<RepositoryUrl>https://github.com/Finly-app/SharedContracts</RepositoryUrl>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<!--<PackageReadmeFile>README.md</PackageReadmeFile>-->
 	</PropertyGroup>
 
 </Project>
