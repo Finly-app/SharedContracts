@@ -14,20 +14,12 @@ jobs:
       - name: Checkout with submodules
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # required for versioning/commits
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
-
-      - name: Add GitHub NuGet source with credentials
-        run: |
-          dotnet nuget add source https://nuget.pkg.github.com/Finly-app/index.json \
-            --name github \
-            --username ${{ github.actor }} \
-            --password ${{ secrets.GH_PAT }} \
-            --store-password-in-clear-text
 
       - name: Restore dependencies
         run: dotnet restore
@@ -51,3 +43,6 @@ jobs:
 
       - name: Push to GitHub Packages (NuGet)
         run: |
+          dotnet nuget push ./nupkg/*.nupkg \
+            --api-key ${{ secrets.GH_PAT }} \
+            --source "https://nuget.pkg.github.com/Finly-app/index.json"
