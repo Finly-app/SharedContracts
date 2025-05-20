@@ -6,12 +6,11 @@
 		<!-- NuGet Package Info -->
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>Finly.Shared.Contracts</PackageId>
-		<Version>1.0.1</Version>
-		<!-- You can also automate this -->
 		<Authors>Jason Spaninks</Authors>
 		<Company>Finly</Company>
 		<Description>Shared contracts for finly microservices.</Description>
 		<RepositoryUrl>https://github.com/Finly-app/SharedContracts</RepositoryUrl>
+		<!--<PackageReadmeFile>README.md</PackageReadmeFile>-->
 	</PropertyGroup>
 
 </Project>
