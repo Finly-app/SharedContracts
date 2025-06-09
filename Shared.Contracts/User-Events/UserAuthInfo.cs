@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
 
 public class UserAuthInfo {
     public Guid Id { get; set; }
@@ -7,4 +6,5 @@ public class UserAuthInfo {
     public string Email { get; set; }
     public bool EmailConfirmed { get; set; }
     public bool Active { get; set; }
+    public bool Deleted { get; set; }
 }
